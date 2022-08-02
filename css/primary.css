@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/*Variables*/
+/*Seteo del html y body, font family y b.g color*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  background-color: DEDEDE; }
+
+/*Fuente secundaria*/
+.secondary-font {
+  font-family: "Pacifico", cursive; }
+
+/*Diferentes font weights para la tipografía Montserrat, descargué los font weights que me parecían necesarios*/
+.weight-thin {
+  font-weight: 200; }
+
+.weight-regular {
+  font-weight: 400; }
+
+.weight-bold {
+  font-weight: 600; }
+
+/*Resizing de imagenes y posicionamiento para que diferentes resoluciones de imagen no alteren el alto del carousel*/
+#carousel .carousel-inner .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 50vh; }
+
+/*Gradiente para poner sobre carousel y hacer destacar el texto blanco*/
+#carousel .carousel-item::before {
+  content: "";
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh; }
+
+/*Custom button ya que el primario de bootstrap es azul*/
+.btn-primary {
+  border-radius: 55px;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white; }
+  .btn-primary:hover {
+    background-color: #bd2130;
+    border-color: #bd2130; }
+  .btn-primary:focus {
+    background-color: #bd2130;
+    border-color: #bd2130; }
+
+/*Filter list para filtrar en tienda virtual*/
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover {
+    color: gray; }
+  a:focus {
+    color: gray; }
+
+.h-text-spacing {
+  letter-spacing: 5px; }
+
+.bg-red {
+  background-color: #dc3545;
+  border-color: #dc3545; }
+
+.bg-alt {
+  background-color: #293462; }
+
+.card {
+  margin: 0.25rem; }
+
+ul {
+  list-style: none; }
+
+li:not(:last-child) {
+  margin-bottom: 5px; }
+
+footer i {
+  color: white; }
+
+.small-input {
+  width: 50px; }
+
+/*About-us - Escribir sobre la imagen*/
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white; }
+  .img-container .img-holder-lg {
+    opacity: 0.5; }
+
+.img-centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+/*Quería usar un gradiente sobre las imagenes pero chocaba mucho con el fondo*/
+.img-darken {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 0%); }
+
+.img-holder {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center; }
+
+.img-holder-lg {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center; }
+
+/*Todas las imagenes ocupan el mismo espacio dentro del card -> imagen arriba*/
+/*Mobile first*/
+.card .card-img-top {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center; }
+
+/*Resizing de imagen para pantallas más grandes*/
+@media (min-width: 768px) and (max-width: 992px) {
+  .card .card-img-top {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+    object-position: center; } }
+@media (min-width: 992px) {
+  .card .card-img-top {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    object-position: center; } }
+
+/*# sourceMappingURL=primary.css.map */
